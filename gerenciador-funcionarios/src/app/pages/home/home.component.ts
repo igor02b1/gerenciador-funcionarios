@@ -19,5 +19,10 @@ export class HomeComponent implements OnInit {
     this.funcionarioService.getFuncionarios().subscribe(data => {
       console.log(data)
     })  
+
+    search(event : Event){
+      const target = event?.target as HTMLInputElement;
+      const value = target.value;
+    }
   }
 }
