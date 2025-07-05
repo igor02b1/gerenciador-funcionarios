@@ -3,7 +3,7 @@ export interface Funcionario{
     nome: string;
     sobrenome: string;
     departamento: string;
-    ativo: string;
+    ativo: boolean;
     turn: string;
     dataDeCriacao? : string;
     dataDeAlteracao? : string;
