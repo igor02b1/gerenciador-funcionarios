@@ -1,0 +1,36 @@
+<h1>Cadastrar funcionario</h1>
+<form [formGroup]="funcionarioForm" (ngSubmit)="submit()" #formDit="ngForm">
+    <div class="input-box">
+        <label for="">Nome: </label>
+        <input type="text" formControlName="nome" placeholder="insira o nome!" required>
+    </div>
+    <div class="input-box">
+        <label for="">Sobrenome: </label>
+        <input type="text" formControlName="sobrenome" placeholder="insira o Sobrenome!" required>
+    </div>
+
+    <div class="input-box">
+        <label for="">Departamento: </label>
+        <select id="departamento" formControlName="departamento" required>
+            <option value="RH">RH</option>
+            <option value="Financeiro">Financeiro</option>
+            <option value="Compras">Compras</option>
+            <option value="Atendimento">Atendimento</option>
+            <option value="Zeladoria">Zeladoria</option>
+        </select>
+    </div>
+
+    <div class="input-box">
+        <label for="">Turno: </label>
+        <select id="turno" formControlName="turno" required>
+            <option value="Manhã">Manhã</option>
+            <option value="Tarde">Tarde</option>
+            <option value="Noite">Noite</option>
+        </select>
+    </div>
+
+    <div class="btn-box">
+        <button type="submit" [disabled]="!funcionarioForm.valid">Cadastrar</button>
+        <button routerLink="">Voltar</button>
+    </div>
+</form>
