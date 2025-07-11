@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Funcionario } from '../../Models/Funcionarios';
 import { RouterLink } from '@angular/router';
@@ -11,6 +11,9 @@ import { RouterLink } from '@angular/router';
 })
 export class FuncionarioFormComponent implements OnInit{
   @Output() OnSubmit = new EventEmitter<Funcionario>();
+  @Input() btnAcao!: string;
+  @Input() btnTitulo!: string;
+  
   funcionarioForm! : FormGroup;
 
   constructor() {}
