@@ -4,7 +4,7 @@ export interface Funcionario{
     sobrenome: string;
     departamento: string;
     ativo: boolean;
-    turn: string;
+    turno: string;
     dataDeCriacao? : string;
     dataDeAlteracao? : string;
 
